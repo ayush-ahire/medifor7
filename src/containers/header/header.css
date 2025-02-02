@@ -1,0 +1,119 @@
+.gpt3__header {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.gpt3__header-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+
+.gpt3__header-content h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 70px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.gpt3__header-content p {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+}
+
+.gpt3__header-content-people {
+  display: flex;
+  align-items: center;
+}
+
+.gpt3__header-content-people img {
+  width: 181.79px;
+  height: 38px;
+}
+
+.gpt3__header-content-people p {
+  margin: 0 0 0 1rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 38px;
+}
+
+.gpt3__header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gpt3__header-image img {
+  height: 100%;
+  width: 100%; /* Optional, for a circular border effect */
+  background: transparent;
+}
+
+.glowing-border {
+  position: relative; /* Ensures the glow matches the shape of the image */
+  background: transparent;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.6))
+    drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+  transition: all 0.3s ease-in-out;
+}
+
+.glowing-border:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.8))
+    drop-shadow(0 0 25px rgba(0, 255, 255, 0.8));
+}
+
+/* Gradient glow effect */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .gpt3__header {
+    flex-direction: column;
+  }
+  .gpt3__header-content {
+    margin: 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gpt3__header-content h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .gpt3__header-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .gpt3__header-content h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .gpt3__header-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
